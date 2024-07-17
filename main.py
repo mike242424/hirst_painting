@@ -6,7 +6,6 @@ def random_color():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
-
     color = (r, g, b)
     return color
 
@@ -70,25 +69,6 @@ for i in range(16):
     turn_right()
     move_forward()
     turn_right()
-
-
-def forward():
-    turtle.forward(20)
-
-
-def backward():
-    turtle.left(180)
-    turtle.forward(20)
-
-
-def turn_right():
-    turtle.right(90)
-    turtle.forward(20)
-
-
-def turn_left():
-    turtle.left(90)
-    turtle.forward(50)
 
 
 screen = t.Screen()
