@@ -11,7 +11,6 @@ def random_color():
 
 
 def move_to_start():
-    turtle.penup()
     turn_around()
     for _ in range(17):
         move_forward()
@@ -20,13 +19,10 @@ def move_to_start():
     for _ in range(15):
         move_forward()
     turn_left()
-    turtle.pendown()
 
 
 def move_forward():
-    turtle.up()
     turtle.forward(20)
-    turtle.down()
 
 
 def fill_line():
@@ -37,15 +33,11 @@ def fill_line():
 
 
 def turn_left():
-    turtle.up()
     turtle.left(90)
-    turtle.down()
 
 
 def turn_right():
-    turtle.up()
     turtle.right(90)
-    turtle.down()
 
 
 def turn_around():
@@ -53,11 +45,11 @@ def turn_around():
 
 
 turtle = t.Turtle()
+turtle.hideturtle()
+turtle.penup()
 t.colormode(255)
 turtle.speed('fastest')
 
-turtle.shape('circle')
-turtle.shapesize(.5)
 move_to_start()
 
 for i in range(16):
@@ -73,5 +65,3 @@ for i in range(16):
 
 screen = t.Screen()
 screen.exitonclick()
-
-
